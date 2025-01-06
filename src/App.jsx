@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { ContactForm } from "./components/Contact";
-import { EducationForm } from "./components/Education";
-import { ExperienceForm } from "./components/Experience";
-import { SkillForm } from "./components/Skills";
-import { SummaryForm } from "./components/Summary";
+import Contact from "./components/Contact";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
+import Skill from "./components/Skills";
+import Summary from "./components/Summary";
 import "./App.css";
 
 /*
@@ -14,11 +14,11 @@ to add more than one component if necessary
 function App() {
   return (
     <section>
-      <ContactForm />
-      <SummaryForm />
-      <ExperienceForm />
-      <SkillForm />
-      <EducationForm />
+      <Contact />
+      <Summary />
+      <Experience />
+      <Skill />
+      <Education />
     </section>
   );
 }
