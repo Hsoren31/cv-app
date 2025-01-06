@@ -1,1 +1,21 @@
+section {
+  padding: 1rem;
+}
 
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  width: 150px;
+}
+
+fieldset {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+input {
+  margin: 5px 0;
+}
