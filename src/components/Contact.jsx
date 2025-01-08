@@ -13,10 +13,12 @@ export default function Contact() {
   return (
     <>
       <section id="contact_section">
-        <h1 id="name">{firstName + " " + lastName}</h1>
+        <h1 id="name">
+          {!firstName && !lastName ? "Jane Doe" : firstName + " " + lastName}
+        </h1>
         <ul id="contact_list">
+          <li>{!email ? "janedoe@email.com" : email}</li>
           <li>{phone}</li>
-          <li>{email}</li>
           <li>{location}</li>
         </ul>
         <button
