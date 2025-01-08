@@ -1,3 +1,29 @@
+:root {
+  /* fonts */
+  --ff-accent: "Roboto", serif;
+  --ff-base: "Merriweather", serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2rem;
+
+  /* colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-gray: hsl(0, 0%, 95%);
+  --clr-gray: hsl(240, 4%, 62%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-overlay: hsla(240, 3%, 47%, 0.7);
+  --clr-highlight: hsl(201, 27%, 29%);
+  --clr-highlight-overlay: hsl(201, 27%, 20%);
+}
+
 *,
 *::before,
 *::after {
@@ -6,6 +32,59 @@
 
 * {
   margin: 0;
-  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--clr-light-gray);
+  min-height: 100vh;
+}
+
+input,
+button,
+textarea,
+select {
   font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-light);
+}
+
+p,
+li {
+  font-family: var(--ff-base);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-light);
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--clr-overlay);
 }

@@ -13,7 +13,7 @@ to add more than one component if necessary
 
 function App() {
   return (
-    <section>
+    <section id="resume_page">
       <Contact />
       <Summary />
       <Experience />
