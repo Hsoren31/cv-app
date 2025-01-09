@@ -1,0 +1,15 @@
+.ed-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.ed-row > * {
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-base);
+  font-size: var(--fs-300);
+}
+
+#schoolAchievements {
+  min-width: 450px;
+  min-height: 150px;
+}

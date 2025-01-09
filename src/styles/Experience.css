@@ -1,0 +1,27 @@
+.experience {
+  display: grid;
+}
+
+.exp-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.exp-row > * {
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-base);
+  font-size: var(--fs-300);
+}
+
+#role_desc_input {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+}
+
+#role_description {
+  min-width: 450px;
+}
+
+#exp_form_btns {
+  grid-column: 1 / 3;
+}

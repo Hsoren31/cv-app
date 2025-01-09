@@ -1,33 +1,13 @@
-#contact_section:hover {
-  border: 1px solid var(--clr-overlay);
-  padding: 0.5rem;
-  #edit_contact {
-    display: block;
-  }
-}
-
 #name {
   font-size: var(--fs-700);
-  border-bottom: 2px solid var(--clr-gray);
 }
 
 #contact_list {
   display: flex;
   gap: 10px;
-  list-style: none;
-  padding-left: 1rem;
   justify-content: start;
 }
 
-#edit_contact {
-  display: none;
-  position: absolute;
-  top: 120px;
-  right: 120px;
-}
-
 #contact_form {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
 }

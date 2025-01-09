@@ -32,6 +32,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -70,7 +71,7 @@ h5,
 h6 {
   text-wrap: balance;
   font-family: var(--ff-accent);
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-regular);
 }
 
 p,
@@ -80,6 +81,10 @@ li {
   font-weight: var(--fw-light);
 }
 
+ul {
+  list-style: none;
+}
+
 button {
   border: none;
 }
@@ -87,4 +92,5 @@ button {
 button:hover {
   cursor: pointer;
   background-color: var(--clr-overlay);
+  color: var(--clr-white);
 }
