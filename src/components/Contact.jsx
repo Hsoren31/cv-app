@@ -12,8 +12,8 @@ export default function Contact() {
 
   return (
     <>
-      <section id="contact_section">
-        <h1 id="name">
+      <section className="resume_section contact">
+        <h1 id="name" className="section_title">
           {!firstName && !lastName ? "Jane Doe" : firstName + " " + lastName}
         </h1>
         <ul id="contact_list">
@@ -22,7 +22,6 @@ export default function Contact() {
           <li>{location}</li>
         </ul>
         <button
-          id="edit_contact"
           className="edit fa-regular fa-pen-to-square"
           onClick={() => setShowModal(true)}
         ></button>
@@ -38,7 +37,7 @@ export default function Contact() {
                 setShowModal(false);
               }}
             >
-              <fieldset id="contact_form">
+              <fieldset id="contact_form" className="form_fieldset">
                 <legend>Contact Info</legend>
                 <p>
                   <label htmlFor="first_name">

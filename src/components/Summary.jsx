@@ -8,28 +8,38 @@ export default function Summary() {
 
   return (
     <>
-      <section id="summary_section">
-        <h2>Summary</h2>
-        <p>{summary}</p>
-        <button onClick={() => setShowModal(true)}>Edit</button>
+      <section className="resume_section summary">
+        <h2 className="section_title">Summary</h2>
+        <p>
+          {!summary
+            ? "Enter a brief description of your professional background."
+            : summary}
+        </p>
+        <button
+          id="edit_summary"
+          className="edit fa-regular fa-pen-to-square"
+          onClick={() => setShowModal(true)}
+        ></button>
       </section>
       {showModal &&
         createPortal(
-          <section id="summary_form" className="form_portal">
+          <section className="form_portal">
             <form
+              className="form"
               method="post"
               onSubmit={(e) => {
                 e.preventDefault();
                 setShowModal(false);
               }}
             >
-              <fieldset>
+              <fieldset className="form_fieldset">
                 <legend>Summary</legend>
 
                 <p>
                   <label htmlFor="summary">
                     How would you describe yourself?
                   </label>
+                  <br></br>
                   <textarea
                     value={summary}
                     onChange={(e) => {
@@ -39,18 +49,21 @@ export default function Summary() {
                     id="summary"
                   ></textarea>
                 </p>
+                <p className="form_btns">
+                  <button onClick={() => setShowModal(false)}>Cancel</button>
+                  {/*Cancel button should not save input values. It bypasses the form validation */}
+                  <button
+                    className="save_btn"
+                    type="submit"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      setShowModal(false);
+                    }}
+                  >
+                    Save
+                  </button>
+                </p>
               </fieldset>
-              <button onClick={() => setShowModal(false)}>Cancel</button>
-              {/*Cancel button should not save input values. It bypasses the form validation */}
-              <button
-                type="submit"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setShowModal(false);
-                }}
-              >
-                Save
-              </button>
             </form>
           </section>,
           document.body

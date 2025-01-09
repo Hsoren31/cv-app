@@ -8,24 +8,28 @@ export default function Skill() {
   /*Skills should be an array that we will use array.map to render */
   return (
     <>
-      <section id="skills_section">
-        <h2>Skills</h2>
+      <section className="resume_section skills">
+        <h2 className="section_title">Skills</h2>
         <ul>
-          <li>{skills}</li>
+          <li>{!skills ? "Time Management" : skills}</li>
         </ul>
-        <button onClick={() => setShowModal(true)}>Edit</button>
+        <button
+          className="edit fa-regular fa-pen-to-square"
+          onClick={() => setShowModal(true)}
+        ></button>
       </section>
       {showModal &&
         createPortal(
-          <section id="skill_form" className="form_portal">
+          <section className="form_portal">
             <form
+              className="form"
               method="post"
               onSubmit={(e) => {
                 e.preventDefault();
                 setShowModal(false);
               }}
             >
-              <fieldset>
+              <fieldset id="skill_form" className="form_fieldset">
                 <legend>Skills</legend>
 
                 <p>
@@ -41,18 +45,20 @@ export default function Skill() {
                     placeholder="Time management"
                   />
                 </p>
-
-                <button onClick={() => setShowModal(false)}>Cancel</button>
-                {/*Cancel button should not save input values. It bypasses the form validation */}
-                <button
-                  type="submit"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setShowModal(false);
-                  }}
-                >
-                  Save
-                </button>
+                <p className="form_btns">
+                  <button onClick={() => setShowModal(false)}>Cancel</button>
+                  {/*Cancel button should not save input values. It bypasses the form validation */}
+                  <button
+                    className="save_btn"
+                    type="submit"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      setShowModal(false);
+                    }}
+                  >
+                    Save
+                  </button>
+                </p>
               </fieldset>
             </form>
           </section>,
